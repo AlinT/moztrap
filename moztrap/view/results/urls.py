@@ -35,6 +35,11 @@ urlpatterns = patterns(
         "runcaseversions.views.runcaseversion_details",
         name="results_runcaseversion_details"),
 
+    # group list
+    url(r"^cases_group/$",
+        "runcaseversions.views.runcaseversions_group_list",
+        name="results_runcaseversions_group"),
+
     # results ----------------------------------------------------------------
 
     # list

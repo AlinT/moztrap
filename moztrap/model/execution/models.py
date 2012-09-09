@@ -24,6 +24,8 @@ class Run(MTModel, TeamModel, DraftStatusModel, HasEnvironmentsModel):
     description = models.TextField(blank=True)
     start = models.DateField(default=datetime.date.today)
     end = models.DateField(blank=True, null=True)
+    is_series = models.BooleanField(default=False)
+    series = models.IntegerField(blank=True, null=True)
 
     caseversions = models.ManyToManyField(
         CaseVersion, through="RunCaseVersion", related_name="runs")
